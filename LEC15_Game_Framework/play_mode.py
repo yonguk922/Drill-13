@@ -26,10 +26,13 @@ def handle_events():
         elif item_mode and event.type == SDL_KEYDOWN:
             if event.key == SDLK_0:
                 selected_ball = 0
+                item_mode = False
             elif event.key == SDLK_1:
                 selected_ball = 1
+                item_mode = False
             elif event.key == SDLK_2:
                 selected_ball = 2
+                item_mode = False
             else:
                 boy.handle_event(event)
         elif item_mode:
